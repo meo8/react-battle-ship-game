@@ -5,8 +5,13 @@ class Board extends Component {
   constructor (){
   super ()
   this.state = {
-    board: [0,0,0,0,0,0,0,0,0,0]
+    board: [0,0,0,0,0,0,0,0,0,0],
+    }
   }
+
+  indexLocation = (index) => {
+
+
   }
 
   render() {
@@ -14,6 +19,7 @@ class Board extends Component {
       return(
         <Square
           index = {index}
+          indexLocation = {this.indexLocation}
           />
       )
     })
