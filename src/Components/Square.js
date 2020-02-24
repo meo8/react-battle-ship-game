@@ -10,10 +10,19 @@ class Square extends Component {
   }
 
   handleClick = () => {
+    let count = this.props.counter; // 5
+
     if (this.state.isclicked === "off") {
+      count = this.props.counter - 1;
       this.setState({isclicked: "on"})
-      this.setState({backgroundColor: "red"})
+      this.setState({color: "red"})
     }
+
+    if (count < 0) {
+      return count = 0;
+    }
+
+    this.props.indexLocation(count)
   }
 
   render() {

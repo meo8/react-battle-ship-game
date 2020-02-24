@@ -6,11 +6,12 @@ class Board extends Component {
   super ()
   this.state = {
     board: [0,0,0,0,0,0,0,0,0,0],
+    counter: 5
     }
   }
 
-  indexLocation = (index) => {
-
+  indexLocation = (count) => {
+    this.setState({counter: count});
 
   }
 
@@ -18,14 +19,21 @@ class Board extends Component {
     let square = this.state.board.map((value, index) => {
       return(
         <Square
+          key={index}
           index = {index}
+          counter={this.state.counter}
           indexLocation = {this.indexLocation}
           />
       )
     })
     return (
       <div id="board">
-        {square}
+        <h1>Battle Ship</h1>
+        <h2 id="counter">Torpedoes left: {this.state.counter}</h2>
+
+        <div id="squares">
+          {square}
+        </div>
       </div>
     );
   }
