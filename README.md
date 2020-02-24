@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+As a user I can see a 10 x 10 grid so that I can see the gameboard.
 
-In the project directory, you can run:
+As a user when I click on a position, the position changes color so that I can tell that a position has been torpedoed.
 
-### `yarn start`
+As a user I can see how many torpedoes I have used, so that I can keep track of how many I have used.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a user once a position has been torpedoed, it cannot be torpedoed again so that I don't waste torpedoes.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+As user I expect there to be 5 single length ships on the board.
 
-### `yarn test`
+As a user when I click on a position I can see if there was a ship at that location so that I can see if I hit a ship. If there is a ship it counts as a hit.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user I have won the game when I have 5 hits on the board, so that I know when the game is won and over.
 
-### `yarn build`
+As a user I have a limit of 25 torpedoes to hit all ships, and when I run out I have lost the game, so that that game is a challenge.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As a user if I lose, I can see where the ships were, so that I know there were actual ships on the board.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Second Epic
+As a user I can see how many torpedoes I have left instead of how many I have used.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a user I don't have ships that touch, so that there is always space between ships.
 
-### `yarn eject`
+As a user I can torpedo a 5 block ship, so that the game is diverse.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+As a user I can torpedo two 4 block ships, so that the game is diverse.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As a user I can torpedo two 3 block ships,, so that the game is diverse.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+As a user I can torpedo two 2 block ships, so that the game is diverse.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+As a user I can torpedo one 1 block submarine, so that the game is diverse.
 
-## Learn More
+Third Epic
+As a user the ships can be oriented vertical or horizontal but not diagonally, so that there is a diverse placement of ships on the board.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As a user I can randomly place the two 4 block ships, one vertical one horizontal, so that there is a diverse placement of 4 block ships on the board.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+As a user I can randomly place the 3 block ships, one vertical one horizontal, so that there is a diverse placement of 3 block ships on the board.
 
-### Code Splitting
+As a user I can randomly place the two 2 block ships, one vertical one horizontal, so that there is a diverse placement of 2 block ships on the board.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+As a user I can see the status of ships I have sunk/not sunk, so that I have an easier way of knowing how many and which ships I left.
