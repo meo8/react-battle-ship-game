@@ -19,11 +19,13 @@ class Square extends Component {
     }
 
     if (count < 0) {
-      return count = 0;
+      this.setState({color:"green"})
+      return count = 0
     }
 
     this.props.indexLocation(count)
   }
+
 
   render() {
     return (
