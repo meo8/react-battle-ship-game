@@ -1,11 +1,13 @@
 #squares {
   display:flex;
   flex-flow:row wrap;
-  width:550px;
+  width:650px;
 }
 
 .square{
   width:100px;
   height:100px;
-  border: solid 2px black;
+  border: solid 2px white;
+  font-size: 60px;
+  padding: 20px 0 0 20px;
 }

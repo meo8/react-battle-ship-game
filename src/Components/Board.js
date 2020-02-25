@@ -1,37 +1,50 @@
 import React, {Component} from 'react';
-import Square from './Square.js'
+import Square from './Square.js';
 
 class Board extends Component {
   constructor (){
   super ()
   this.state = {
-    board: ["","","","","","","","","",""],
-    counter: 5,
+    board: this.generateBoard(20),
+    counter: 10,
     ship: "🚢",
-    shipLoc: this.generateShips()
+    shipLoc: this.generateShips(7)
     }
   }
 
-  generateShips = () => {
+  generateShips = (shipsToSink) => {
     // makes unique number
     let array = [0,1,2,3,4,5,6,7,8,9];
     let newArr = [];
 
-    for (let n = 0; n < 5; ++n) {
+    for (let n = 0; n < shipsToSink; ++n) {
       let i = Math.floor((Math.random() * (9 - n)) + 1);
       newArr.push(array[i]);
-      // array[5] = array[9]
       array[i] = array[9 - n];
     }
     console.log(newArr);
     return newArr;
   }
 
+  generateBoard = (num) => {
+    let array = [];
+    if (num % 5 === 0) {
+      for (let i = 1; i <= num; i++) {
+        array.push("");
+      }
+    } else {
+      // for now it's a console.log, but should appear where the win/lose messages would be; i.e., setState of message to the follow
+      console.log("Please enter numbers divisible by 5 only (5, 10, 15, etc.)")
+    }
+    return array;
+  }
+
   indexLocation = (index, count) => {
     let { shipLoc, board, ship } = this.state;
-    this.setState({counter: count});
     let newBoard = board;
 
+    this.setState({counter: count});
+    // checks if the location of ship is the same as index, if it is, show the ship icon
     for (let i = 0; i < shipLoc.length; i++) {
       if (shipLoc[i] === index) {
         newBoard[index] = ship;
@@ -41,6 +54,7 @@ class Board extends Component {
 
 }
   render() {
+    // generates 1 Square comp. for every element in the board
     let square = this.state.board.map((value, index) => {
       return(
         <Square
@@ -49,9 +63,10 @@ class Board extends Component {
           index = {index}
           counter={this.state.counter}
           indexLocation = {this.indexLocation}
-          />
+        />
       )
     })
+
     return (
       <div id="board">
         <h1>Battle Ship</h1>
