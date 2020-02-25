@@ -5,7 +5,8 @@ class Square extends Component {
   super(props)
     this.state = {
       isclicked: "off",
-      color: "green"
+      color: "green",
+      isDisabled: ""
     }
   }
 
@@ -19,17 +20,19 @@ class Square extends Component {
     }
 
     if (count < 0) {
-      this.setState({color:"green"})
+      this.setState({color:"green"});
+      this.setState({isDisabled: "disabled"})
       return count = 0
     }
 
-    this.props.indexLocation(count)
+    this.props.indexLocation(this.props.index, count)
   }
 
 
   render() {
     return (
-      <div className="square" onClick={this.handleClick} isclicked={this.state.isclicked} style={{ backgroundColor: this.state.color }}>
+      <div className="square" disabled={this.state.isDisabled} onClick={this.handleClick} isclicked={this.state.isclicked} style={{ backgroundColor: this.state.color }}>
+      {this.props.value}
       </div>
     );
   }
